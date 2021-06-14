@@ -1,0 +1,31 @@
+{
+  "name": "glyphhanger",
+  "version": "1.0.0",
+  "description": "glyphhanger optimizes webfonts",
+  "author": "Andy Ruck",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/talentplatforms/glyphhanger.git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "webfonts",
+    "optimize"
+  ],
+  "scripts": {
+    "release": "standard-version",
+    "release:minor": "standard-version --release-as minor",
+    "release:patch": "standard-version --release-as patch"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
+    "husky": "^4.2.3",
+    "standard-version": "^9.3.0"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  }
+}

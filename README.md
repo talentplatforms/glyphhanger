@@ -11,7 +11,7 @@ A docker image that has [Glyphhanger](https://github.com/filamentgroup/glyphhang
 You can run the container directly with docker. The files to process should be mounted to the `/app` folder within the container:
 
 ```
-docker run --rm -v "/dist:/app" raeffs/glyphhanger index.html --jsdom --subset=*.woff
+docker run --rm -v "/dist:/app" talentplatforms/glyphhanger index.html --jsdom --subset=*.woff
 ```
 
 For all available options please refer to the [Glyphhanger Documentation](https://github.com/filamentgroup/glyphhanger).

@@ -1,6 +1,14 @@
-dockerfile
-.dockerignore
-README.md
-LICENSE
-.editorconfig
+# folders
 .github
+node_modules
+
+# files
+.dockerignore
+.editorconfig
+commitlint.config.js
+Dockerfile
+LICENSE
+logo.svg
+Makefile
+package*.json
+README.md
