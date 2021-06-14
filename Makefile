@@ -63,5 +63,6 @@ push: push_debian
 
 push_debian:
 	docker push ${_DEBIAN_IMAGE_TAGGED}
+	docker push ${REGISTRY}:latest
 
 # make NODE_VERSION=13.10.1 build push
