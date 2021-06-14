@@ -41,7 +41,7 @@ _IMAGE_LATEST=${REGISTRY}:latest
 _DEBIAN_IMAGE_TAGGED=${REGISTRY}:${NODE_VERSION}-${DEBIAN_VERSION_NAME}-slim
 
 # builds the image and tags it with the latest tag and the more specific tag defined in _IMAGE_TAGGED
-build: build_alpine build_debian
+build: build_debian
 
 build_debian:
 	docker build \
@@ -53,6 +53,7 @@ build_debian:
 	--build-arg VCS_REF=${_VCS_REF} \
 	--build-arg BUILDKIT_INLINE_CACHE=1 \
 	-t ${_DEBIAN_IMAGE_TAGGED} \
+  -t ${REGISTRY}:latest \
 	-f ./debian/Dockerfile \
 	.
 
